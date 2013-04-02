@@ -49,20 +49,21 @@
 
 ##功能描述：业主条件查询雇员信息
 
-###请求：/employes/:id
+###请求：/employes?queryKey=queryValue
 ###请求类型：GET
+###允许的queryKey为：displayName、phone、idcard、createdAt、leaveAt
 
 ##响应
 ###`201` - 请求成功
 ```json
-{
+[{
   "id": "154d4534a48e475",
   "userID": "15423d4a578e475",
   "shopID": "154ac44a578e475",
   "createdAt": "1364804674255",
   "leaveAt": "",
   "status": "active"
-}
+}]
 ```
 ###`400` - 请求参数错误
 ###`401` - 权限不够
