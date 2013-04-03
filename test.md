@@ -15,7 +15,9 @@
 ###必要项目
 * `shopID`  
 * `username`  
-* `status`  
+
+###默认项目
+* `status` - "active"
 
 
 ##响应
@@ -147,12 +149,7 @@
   "id": "154d4534a48e475",
   "userID": "15423d4a578e475",
   "shopID": "154ac44a578e475",
-  "createdAt": "1364804674255",
-  "leaveAt": "",
-  "status": "leaved",
-  "phone": "15155522244",
-  "displayName": "张良",
-  "idcard": "320123199005123210"
+  "status": "leaved"
 }
 ```
 ###必要项目
