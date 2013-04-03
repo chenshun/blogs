@@ -15,9 +15,8 @@
 ###必要项目
 *`username`
 *`shopID`
+*`status`
 
-###默认项目
-*`status` - "active"
 
 ##响应
 ###`201` - 添加成功
@@ -95,9 +94,8 @@
 ###必要项目
 *`shopID`
 *`username`
+*`status`
 
-###默认项目
-*`status` - "active"
 
 ##响应
 ###`201` - 更新成功
@@ -126,9 +124,8 @@
 ###必要项目
 *`shopID`
 *`username`
+*`status`
 
-###默认项目
-*`status` - "leaved"
 
 ##响应
 ###`201` - 更新成功
