@@ -88,8 +88,6 @@
   "id": "154d4534a48e475",
   "userID": "15423d4a578e475",
   "shopID": "154ac44a578e475",
-  "createdAt": "1364804674255",
-  "leaveAt": "",
   "status": "active",
   "phone": "15155522244",
   "displayName": "张良",
