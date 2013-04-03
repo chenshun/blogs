@@ -10,7 +10,7 @@
   "name": "华仔4号店",
   "address": "江宁区胜太路44号",
   "telephone": "02544444444",
-  "merchantID": "",
+  "merchantID": "154d4534a48e475",
 }
 ```
 ###必要项目
@@ -34,14 +34,12 @@
 ```json
 [{
   "id": "154d4534a48e475",
-  "userID": "15423d4a578e475",
-  "shopID": "154ac44a578e475",
-  "createdAt": "1364804674255",
-  "leaveAt": "",
-  "status": "active",
-  "phone": "15155522244",
-  "displayName": "张良",
-  "idcard": "320123199005123210"
+  "name": "",
+  "address": "",
+  "telephone": "",
+  "closeAt": "",
+  "createdAt": "",
+  "displayName": "张良"
 }]
 ```
 ###`400` - 请求参数错误
