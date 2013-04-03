@@ -114,7 +114,7 @@
   "address": "江宁区胜太路44号",
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
-  "status": "open",
+  "status": "closed",
   "createdAt": "",
   "closeAt": ""
 }
