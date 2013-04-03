@@ -1,9 +1,9 @@
-# 雇员：employes
+# 商户：merchants
 ***
 ##业主添加新雇员
 
-###请求
-###POST /employes
+##请求
+###POST /merchants
 
 ```json
 {
@@ -40,48 +40,10 @@
 ***
 
 
-##业主查询雇员信息
+##业主更新商户信息
 
-###请求
-###GET /employes
-###查询条件
-`displayName` - 雇员姓名；示例：?displayName=张良  
-`phone` - 雇员手机号码；示例：?phone=15252522212  
-`idcard` - 雇员身份证号码；示例：?idcard=320123199005123210  
-`createdAt` - 雇员入职时间；示例：?{"createdAt":{"$gt":1000}}  
-`leaveAt` - 雇员离职时间；示例：?{"leaveAt":{"$gt":1000}}  
-`skip` - 查询起始位置；示例：?skip=0  
-`limit` - 查询长度；示例：?limit=20  
-
-###默认项目
-`skip` - 0  
-`limit` - 20  
-
-
-##响应
-###`201` - 请求成功
-```json
-[{
-  "id": "154d4534a48e475",
-  "userID": "15423d4a578e475",
-  "shopID": "154ac44a578e475",
-  "createdAt": "1364804674255",
-  "leaveAt": "",
-  "status": "active",
-  "phone": "15155522244",
-  "displayName": "张良",
-  "idcard": "320123199005123210"
-}]
-```
-###`400` - 请求参数错误
-###`401` - 权限不够
-***
-
-
-##业主更新雇员信息
-
-###请求
-###PUT /employes/:id
+##请求
+###PUT /merchants/:id
 
 ```json
 {
@@ -96,32 +58,6 @@
 ```
 ###必要项目
 * `shopID`  
-
-
-##响应
-###`201` - 更新成功
-###`400` - 请求参数错误
-###`401` - 权限不够
-***
-
-
-##雇员离职
-
-###请求
-###PUT /employes/:id
-
-```json
-{
-  "id": "154d4534a48e475",
-  "userID": "15423d4a578e475",
-  "shopID": "154ac44a578e475",
-  "status": "leaved"
-}
-```
-###必要项目
-* `shopID`  
-* `status`  
-
 
 ##响应
 ###`201` - 更新成功
