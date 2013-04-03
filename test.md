@@ -32,7 +32,8 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "createdAt": "1364967296480",
-  "status": ["open", "suspend", "closed"]
+  "closeAt": "",
+  "status": "open"
 }
 ```
 ###`400` - 请求参数错误
