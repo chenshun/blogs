@@ -50,12 +50,12 @@
 `createdAt` - 开店时间；示例：?{"createdAt":{"$gt":1000}}  
 `closeAt` - 关店时间：示例：?{"closeAt":{"$gt":1000}}  
 `status` - 店铺状态；示例：?status=closed  
-`skip` - 查询起始位置；示例：?skip=0  
-`limit` - 查询长度；示例：?limit=19  
+`skip` - 查询起始位置；示例：?skip=1  
+`limit` - 查询长度；示例：?limit=20  
 
 ###默认项目
-`skip` - 0  
-`limit` - 19  
+`skip` - 1  
+`limit` - 20  
 
 ##响应
 ###`201` - 请求成功
