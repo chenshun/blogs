@@ -1,21 +1,21 @@
-# 雇员：employes
+# 店铺：shops
 ***
-##功能描述：业主添加新雇员
+##功能描述：业主添加新店
 
-###请求：/employes
+###请求：/shops
 ###请求类型：POST
 
 ```json
 {
-  "username": "15155522244",
-  "shopID": "154d454a578e475",
-  "status": ["active", "leaved", "suspend"]
+  "name": "华仔4号店",
+  "address": "江宁区胜太路44号",
+  "telephone": "02544444444",
+  "merchantID": "",
 }
 ```
 ###必要项目
-*`shopID`  
-*`username`  
-*`status`  
+*`name`  
+*`merchantID`  
 
 
 ##响应
@@ -26,7 +26,7 @@
 
 ##功能描述：业主获取所有雇员信息
 
-###请求：/employes
+###请求：/shops
 ###请求类型：GET
 
 ##响应
@@ -50,9 +50,9 @@
 
 ##功能描述：业主条件查询雇员信息
 
-###请求：/employes?phone=15252522212&displayName=张良&idcard=320123199005123210&createdAt=1364804674255&leaveAt=1364809674255
+###请求：/shops?phone=15252522212&displayName=张良&idcard=320123199005123210&createdAt=1364804674255&leaveAt=1364809674255
 ###请求类型：GET
-###允许的queryKey为：displayName、phone、idcard、createdAt、leaveAt
+###允许的queryKey为：
 
 ##响应
 ###`201` - 请求成功
@@ -75,7 +75,7 @@
 
 ##功能描述：业主更新雇员信息
 
-###请求：/employes/:id
+###请求：/shops/:id
 ###请求类型：PUT
 
 ```json
@@ -92,8 +92,8 @@
 }
 ```
 ###必要项目
-*`shopID`  
-*`status`  
+*`name`  
+*`merchantID`  
 
 
 ##响应
@@ -104,7 +104,7 @@
 
 ##功能描述：雇员离职
 
-###请求：/employes/:id
+###请求：/shops/:id
 ###请求类型：PUT
 
 ```json
@@ -121,8 +121,8 @@
 }
 ```
 ###必要项目
-*`shopID`  
-*`status`  
+*`name`  
+*`merchantID`  
 
 
 ##响应
