@@ -50,8 +50,8 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
-  "createdAt": "",
-  "closeAt": ""
+  "createdAt": "1364967296480",
+  "closeAt": "1364969296480"
 }]
 ```
 ###`400` - 请求参数错误
@@ -85,8 +85,8 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
-  "createdAt": "",
-  "closeAt": ""
+  "createdAt": "1364967296480",
+  "closeAt": "1364969296480"
 }]
 ```
 ###`400` - 请求参数错误
@@ -107,8 +107,8 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
-  "createdAt": "",
-  "closeAt": ""
+  "createdAt": "1364967296480",
+  "closeAt": "1364969296480"
 }
 ```
 ###必要项目
@@ -136,8 +136,8 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "closed",
-  "createdAt": "",
-  "closeAt": ""
+  "createdAt": "1364967296480",
+  "closeAt": "1364969296480"
 }
 ```
 ###必要项目
