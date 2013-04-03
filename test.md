@@ -24,6 +24,17 @@
 
 ##响应
 ###`201` - 添加成功
+```json
+{
+  "id": "154d4534a48e475",
+  "name": "华仔4号店",
+  "address": "江宁区胜太路44号",
+  "telephone": "02544444444",
+  "merchantID": "154d4534a48e475",
+  "createdAt": "1364967296480",
+  "status": ["open", "suspend", "closed"]
+}
+```
 ###`400` - 请求参数错误
 ###`401` - 权限不够
 ***
@@ -51,7 +62,7 @@
   "merchantID": "154d4534a48e475",
   "status": "open",
   "createdAt": "1364967296480",
-  "closeAt": "1364969296480"
+  "closeAt": ""
 }]
 ```
 ###`400` - 请求参数错误
@@ -86,7 +97,7 @@
   "merchantID": "154d4534a48e475",
   "status": "open",
   "createdAt": "1364967296480",
-  "closeAt": "1364969296480"
+  "closeAt": ""
 }]
 ```
 ###`400` - 请求参数错误
@@ -107,8 +118,6 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
-  "createdAt": "1364967296480",
-  "closeAt": "1364969296480"
 }
 ```
 ###必要项目
@@ -135,9 +144,7 @@
   "address": "江宁区胜太路44号",
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
-  "status": "closed",
-  "createdAt": "1364967296480",
-  "closeAt": "1364969296480"
+  "status": "closed"
 }
 ```
 ###必要项目
