@@ -11,11 +11,14 @@
   "address": "江宁区胜太路44号",
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
+  "status": ["open", "suspend", "closed"]
 }
 ```
 ###必要项目
 *`name`  
 *`merchantID`  
+###默认项目
+*`status` - "open"  
 
 
 ##响应
@@ -24,7 +27,7 @@
 ###`401` - 权限不够
 
 
-##功能描述：业主获取所有雇员信息
+##功能描述：业主获取所有店铺信息
 
 ###请求：/shops
 ###请求类型：GET
@@ -34,44 +37,44 @@
 ```json
 [{
   "id": "154d4534a48e475",
-  "name": "",
-  "address": "",
-  "telephone": "",
-  "closeAt": "",
+  "name": "华仔4号店",
+  "address": "江宁区胜太路44号",
+  "telephone": "02544444444",
+  "merchantID": "154d4534a48e475",
+  "status": "open",
   "createdAt": "",
-  "displayName": "张良"
+  "closeAt": ""
 }]
 ```
 ###`400` - 请求参数错误
 ###`401` - 权限不够
 
 
-##功能描述：业主条件查询雇员信息
+##功能描述：业主条件查询店铺信息
 
-###请求：/shops?phone=15252522212&displayName=张良&idcard=320123199005123210&createdAt=1364804674255&leaveAt=1364809674255
+###请求：/shops?name=华仔4号店&createdAt=1364957460720&closeAt=1364957460720&status=closed
 ###请求类型：GET
-###允许的queryKey为：
+###允许的queryKey为：name、createdAt、closeAt、status
 
 ##响应
 ###`201` - 请求成功
 ```json
 [{
   "id": "154d4534a48e475",
-  "userID": "15423d4a578e475",
-  "shopID": "154ac44a578e475",
-  "createdAt": "1364804674255",
-  "leaveAt": "",
-  "status": "active",
-  "phone": "15155522244",
-  "displayName": "张良",
-  "idcard": "320123199005123210"
+  "name": "华仔4号店",
+  "address": "江宁区胜太路44号",
+  "telephone": "02544444444",
+  "merchantID": "154d4534a48e475",
+  "status": "open",
+  "createdAt": "",
+  "closeAt": ""
 }]
 ```
 ###`400` - 请求参数错误
 ###`401` - 权限不够
 
 
-##功能描述：业主更新雇员信息
+##功能描述：业主更新店铺信息
 
 ###请求：/shops/:id
 ###请求类型：PUT
@@ -79,14 +82,13 @@
 ```json
 {
   "id": "154d4534a48e475",
-  "userID": "15423d4a578e475",
-  "shopID": "154ac44a578e475",
-  "createdAt": "1364804674255",
-  "leaveAt": "",
-  "status": "active",
-  "phone": "15155522244",
-  "displayName": "张良",
-  "idcard": "320123199005123210"
+  "name": "华仔4号店",
+  "address": "江宁区胜太路44号",
+  "telephone": "02544444444",
+  "merchantID": "154d4534a48e475",
+  "status": "open",
+  "createdAt": "",
+  "closeAt": ""
 }
 ```
 ###必要项目
@@ -108,14 +110,13 @@
 ```json
 {
   "id": "154d4534a48e475",
-  "userID": "15423d4a578e475",
-  "shopID": "154ac44a578e475",
-  "createdAt": "1364804674255",
-  "leaveAt": "",
-  "status": "leaved",
-  "phone": "15155522244",
-  "displayName": "张良",
-  "idcard": "320123199005123210"
+  "name": "华仔4号店",
+  "address": "江宁区胜太路44号",
+  "telephone": "02544444444",
+  "merchantID": "154d4534a48e475",
+  "status": "open",
+  "createdAt": "",
+  "closeAt": ""
 }
 ```
 ###必要项目
