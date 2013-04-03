@@ -7,14 +7,14 @@
 
 ```json
 {
-  "userID": "1a4d454a578e475",
+  "username": "15155522244",
   "shopID": "154d454a578e475",
   "status": ["active", "leaved", "suspend"]
 }
 ```
 ###必要项目
 *`shopID`  
-*`userID`  
+*`username`  
 *`status`  
 
 
@@ -93,7 +93,6 @@
 ```
 ###必要项目
 *`shopID`  
-*`userID`  
 *`status`  
 
 
@@ -123,7 +122,6 @@
 ```
 ###必要项目
 *`shopID`  
-*`userID`  
 *`status`  
 
 
