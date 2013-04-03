@@ -17,6 +17,7 @@
 ###必要项目
 * `name`  
 * `merchantID`  
+
 ###默认项目
 * `status` - "open"  
 
