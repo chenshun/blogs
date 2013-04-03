@@ -13,9 +13,9 @@
 }
 ```
 ###必要项目
-*`username`
-*`shopID`
-*`status`
+*`username`  
+*`shopID`  
+*`status`  
 
 
 ##响应
@@ -92,9 +92,9 @@
 }
 ```
 ###必要项目
-*`shopID`
-*`username`
-*`status`
+*`shopID`  
+*`username`  
+*`status`  
 
 
 ##响应
@@ -122,9 +122,9 @@
 }
 ```
 ###必要项目
-*`shopID`
-*`username`
-*`status`
+*`shopID`  
+*`username`  
+*`status`  
 
 
 ##响应
