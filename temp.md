@@ -51,7 +51,7 @@
 ##请求
 ###GET /employes
 ###查询条件
-`name` - 雇员姓名；示例：?displayName=张良  
+`name` - 雇员姓名；示例：?name=张良  
 `phone` - 雇员手机号码；示例：?phone=15252522212  
 `idcard` - 雇员身份证号码；示例：?idcard=320123199005123210  
 `createdAt` - 雇员入职时间；示例：?{"createdAt":{"$gt":1000}}  
@@ -117,8 +117,6 @@
 ```json
 {
   "id": "154d4534a48e475",
-  "userID": "15423d4a578e475",
-  "shopID": "154ac44a578e475",
   "status": "leave"
 }
 ```
