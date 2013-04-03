@@ -29,7 +29,13 @@
 
 ###请求
 ###GET /employes
+###查询条件
+`start` - 查询起始位置；示例：?start=0  
+`end` - 查询结束位置；示例：?end=19  
 
+###默认项目
+`start` - 0  
+`end` - 19  
 ##响应
 ###`201` - 请求成功
 ```json
@@ -52,9 +58,21 @@
 
 ##业主条件查询雇员信息
 
-###请求：/employes?phone=15252522212&displayName=张良&idcard=320123199005123210&createdAt=1364804674255&leaveAt=1364809674255
-###请求类型：GET
-###允许的queryKey为：displayName、phone、idcard、createdAt、leaveAt
+###请求
+###GET /employes
+###查询条件
+`displayName` - 雇员姓名；示例：?displayName=张良  
+`phone` - 雇员手机号码；示例：?phone=15252522212  
+`idcard` - 雇员身份证号码；示例：?idcard=320123199005123210  
+`createdAt` - 雇员入职时间；示例：?{"createdAt":{"$gt":1000}}  
+`leaveAt` - 雇员离职时间；示例：?{"leaveAt":{"$gt":1000}}  
+`start` - 查询起始位置；示例：?start=0  
+`end` - 查询结束位置；示例：?end=19  
+
+###默认项目
+`start` - 0  
+`end` - 19  
+
 
 ##响应
 ###`201` - 请求成功
