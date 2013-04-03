@@ -1,25 +1,23 @@
-# 店铺：shops
+# 雇员：employes
 ***
-## 业主开店
+##业主添加新雇员
 
 ##请求
-###POST /shops
+###POST /employes
 
 ```json
 {
-  "name": "华仔4号店",
-  "address": "江宁区胜太路44号",
-  "telephone": "02544444444",
-  "merchantID": "154d4534a48e475",
-  "status": ["open", "suspend", "closed"]
+  "username": "15155522244",
+  "shopID": "154d454a578e475",
+  "status": ["active", "leaved", "suspend"]
 }
 ```
 ###必要项目
-* `name`  
-* `merchantID`  
+* `shopID`  
+* `username`  
 
 ###默认项目
-* `status` - "open"  
+* `status` - "active"
 
 
 ##响应
@@ -27,13 +25,14 @@
 ```json
 {
   "id": "154d4534a48e475",
-  "name": "华仔4号店",
-  "address": "江宁区胜太路44号",
-  "telephone": "02544444444",
-  "merchantID": "154d4534a48e475",
-  "createdAt": "1364967296480",
-  "closeAt": "",
-  "status": "open"
+  "userID": "15423d4a578e475",
+  "shopID": "154ac44a578e475",
+  "createdAt": "1364804674255",
+  "leaveAt": "",
+  "status": "active",
+  "phone": "15155522244",
+  "displayName": "张良",
+  "idcard": "320123199005123210"
 }
 ```
 ###`400` - 请求参数错误
@@ -41,34 +40,37 @@
 ***
 
 
-##业主查询店铺信息
+##业主查询雇员信息
 
 ##请求
-###GET /shops
+###GET /employes
 ###查询条件
-`name` - 店铺名称；示例：?name=华仔4号店  
-`createdAt` - 开店时间；示例：?{"createdAt":{"$gt":1000}}  
-`closeAt` - 关店时间：示例：?{"closeAt":{"$gt":1000}}  
-`status` - 店铺状态；示例：?status=closed  
-`skip` - 查询起始位置；示例：?skip=1  
+`displayName` - 雇员姓名；示例：?displayName=张良  
+`phone` - 雇员手机号码；示例：?phone=15252522212  
+`idcard` - 雇员身份证号码；示例：?idcard=320123199005123210  
+`createdAt` - 雇员入职时间；示例：?{"createdAt":{"$gt":1000}}  
+`leaveAt` - 雇员离职时间；示例：?{"leaveAt":{"$gt":1000}}  
+`skip` - 查询起始位置；示例：?skip=0  
 `limit` - 查询长度；示例：?limit=20  
 
 ###默认项目
-`skip` - 1  
+`skip` - 0  
 `limit` - 20  
+
 
 ##响应
 ###`201` - 请求成功
 ```json
 [{
   "id": "154d4534a48e475",
-  "name": "华仔4号店",
-  "address": "江宁区胜太路44号",
-  "telephone": "02544444444",
-  "merchantID": "154d4534a48e475",
-  "status": "open",
-  "createdAt": "1364967296480",
-  "closeAt": ""
+  "userID": "15423d4a578e475",
+  "shopID": "154ac44a578e475",
+  "createdAt": "1364804674255",
+  "leaveAt": "",
+  "status": "active",
+  "phone": "15155522244",
+  "displayName": "张良",
+  "idcard": "320123199005123210"
 }]
 ```
 ###`400` - 请求参数错误
@@ -76,24 +78,22 @@
 ***
 
 
-##业主更新店铺信息
+##业主更新雇员信息
 
 ##请求
-###PUT /shops/:id
+###PUT /employes/:id
 
 ```json
 {
   "id": "154d4534a48e475",
-  "name": "华仔4号店",
-  "address": "江宁区胜太路44号",
-  "telephone": "02544444444",
-  "merchantID": "154d4534a48e475",
-  "status": "open",
+  "userID": "15423d4a578e475",
+  "shopID": "154ac44a578e475",
+  "status": "active",
+  "phone": "15155522244",
+  "displayName": "张良",
+  "idcard": "320123199005123210"
 }
 ```
-###必要项目
-* `name`  
-* `merchantID`  
 
 
 ##响应
@@ -103,23 +103,22 @@
 ***
 
 
-##业主关店
+##雇员离职
 
 ##请求
-###PUT /shops/:id
+###PUT /employes/:id
 
 ```json
 {
   "id": "154d4534a48e475",
-  "name": "华仔4号店",
-  "merchantID": "154d4534a48e475",
-  "status": "closed"
+  "userID": "15423d4a578e475",
+  "shopID": "154ac44a578e475",
+  "status": "leaved"
 }
 ```
 ###必要项目
-* `name`  
-* `merchantID`  
 * `status`  
+
 
 ##响应
 ###`201` - 更新成功
