@@ -61,6 +61,7 @@
   "telephone": "02551234567",
   "zip": "",
   "email": "kaluojiuba@qq.com",
+  "status": "open"
 }
 ```
 
