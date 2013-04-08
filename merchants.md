@@ -34,10 +34,7 @@
   "telephone": "02551234567",
   "zip": "",
   "email": "kaluojiuba@qq.com",
-  "owner": {
-    "id": "e8a69acd47baf94c",
-    "displayName": "张业主"
-  },
+  "userID": "e8a69acd47baf94c",
   "status": "open",
   "createdAt": "1365402743500"
 }
