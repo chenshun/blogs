@@ -1,39 +1,37 @@
-# 会员：members
+#商品：items
 ***
-## 业主添加
+##业主新增商品
 
 ##请求
-###POST /shops
+###POST /items
 
 ```json
 {
-  "name": "华仔4号店",
-  "address": "江宁区胜太路44号",
-  "telephone": "02544444444",
-  "merchantID": "154d4534a48e475",
-  "status": ["open", "suspend", "closed"]
+  "name": "老北京鸡肉卷",
+  "desc": "源自于老北京的经典美食",
+  "price": 5,
+  "shopID": "15425a25c2d25e2",
+  "status": ["sale", "stock", "lack"]
 }
 ```
 ###必要项目
 * `name`  
-* `merchantID`  
+* `price`  
 
 ###默认项目
-* `status` - "open"  
+* `status` - "stock"  
 
 
 ##响应
 ###`201` - 添加成功
 ```json
 {
-  "id": "154d4534a48e475",
-  "name": "华仔4号店",
-  "address": "江宁区胜太路44号",
-  "telephone": "02544444444",
-  "merchantID": "154d4534a48e475",
-  "createdAt": "1364967296480",
-  "closeAt": "",
-  "status": "open"
+  "name": "老北京鸡肉卷",
+  "desc": "源自于老北京的经典美食",
+  "price": 5,
+  "merchantID": "15425a25c2d25e2",
+  "status": "stock",
+  "createdAt": 1365408771288
 }
 ```
 ###`400` - 请求参数错误
@@ -42,15 +40,14 @@
 ***
 
 
-##业主查询店铺信息
+##业主查询商品信息
 
 ##请求
-###GET /shops
+###GET /items
 ###查询条件
-`name` - 店铺名称；示例：?name=华仔4号店  
-`createdAt` - 开店时间；示例：?{"createdAt":{"$gt":1000}}  
-`closeAt` - 关店时间：示例：?{"closeAt":{"$gt":1000}}  
-`status` - 店铺状态；示例：?status=closed  
+`name` - 商品名称；示例：?name=老北京鸡肉卷  
+`createdAt` - 商品新增时间；示例：?{"createdAt":{"$gt":1000}}  
+`status` - 商品状态；示例：?status=stock  
 `skip` - 查询起始位置；示例：?skip=0  
 `limit` - 查询长度；示例：?limit=20  
 
@@ -62,14 +59,12 @@
 ###`200` - 成功返回
 ```json
 [{
-  "id": "154d4534a48e475",
-  "name": "华仔4号店",
-  "address": "江宁区胜太路44号",
-  "telephone": "02544444444",
-  "merchantID": "154d4534a48e475",
-  "status": "open",
-  "createdAt": "1364967296480",
-  "closeAt": ""
+  "name": "老北京鸡肉卷",
+  "desc": "源自于老北京的经典美食",
+  "price": 5,
+  "merchantID": "15425a25c2d25e2",
+  "status": "stock",
+  "createdAt": 1365408771288
 }]
 ```
 ###`204` - 无内容
@@ -80,24 +75,19 @@
 ***
 
 
-##业主更新店铺信息
+##业主更新商品信息
 
 ##请求
-###PUT /shops/:id
+###PUT /items/:id
 
 ```json
 {
-  "id": "154d4534a48e475",
-  "name": "华仔4号店",
-  "address": "江宁区胜太路44号",
-  "telephone": "02544444444",
-  "merchantID": "154d4534a48e475",
-  "status": "open",
+  "name": "老北京鸡肉卷",
+  "desc": "源自于老北京的经典美食",
+  "price": 5,
+  "status": "stock"
 }
 ```
-###必要项目
-* `name`  
-* `merchantID`  
 
 
 ##响应
@@ -108,22 +98,43 @@
 ***
 
 
-##业主关店
+##业主下架商品
 
 ##请求
-###PUT /shops/:id
+###PUT /items/:id
 
 ```json
 {
-  "id": "154d4534a48e475",
-  "name": "华仔4号店",
-  "merchantID": "154d4534a48e475",
-  "status": "closed"
+  "name": "老北京鸡肉卷",
+  "desc": "源自于老北京的经典美食",
+  "price": 5,
+  "status": "stock"
 }
 ```
 ###必要项目
-* `name`  
-* `merchantID`  
+* `status`  
+
+##响应
+###`200` - 更新成功
+###`400` - 请求参数错误
+###`401` - 权限不够
+###`409` - 请求冲突
+
+
+##业主上架商品
+
+##请求
+###PUT /items/:id
+
+```json
+{
+  "name": "老北京鸡肉卷",
+  "desc": "源自于老北京的经典美食",
+  "price": 5,
+  "status": "sale"
+}
+```
+###必要项目
 * `status`  
 
 ##响应
