@@ -1,6 +1,6 @@
-# 店铺：shops
+# 会员：members
 ***
-## 业主开店
+## 业主添加
 
 ##请求
 ###POST /shops
