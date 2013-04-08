@@ -10,7 +10,7 @@
   "name": "老北京鸡肉卷",
   "desc": "源自于老北京的经典美食",
   "price": 5,
-  "shopID": "15425a25c2d25e2",
+  "merchantID": "15425a25c2d25e2",
   "status": ["sale", "stock", "lack"]
 }
 ```
