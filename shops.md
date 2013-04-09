@@ -31,8 +31,8 @@
   "address": "江宁区胜太路44号",
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
-  "createdAt": "1364967296480",
-  "closeAt": "",
+  "createdAt": 1364967296480,
+  "closeAt": ,
   "status": "open"
 }
 ```
@@ -68,8 +68,8 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
-  "createdAt": "1364967296480",
-  "closeAt": ""
+  "createdAt": 1364967296480,
+  "closeAt": 
 }]
 ```
 ###`204` - 无内容
